@@ -1,0 +1,12 @@
+# This will print "later" at the end
+one = one ${later_variable}
+# This will not
+two := two ${later_variable}
+
+later_variable = later
+
+.PHONY: all
+
+all:
+	echo $(one)
+	echo $(two)

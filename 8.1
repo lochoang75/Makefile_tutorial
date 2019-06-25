@@ -1,0 +1,6 @@
+bar := $(subst not, totally, "I am not superman")
+bar2 := $(subst not, totally, "I am not superman")
+.PHONY: all
+all:
+	@echo $(bar)
+	@echo $(bar2)

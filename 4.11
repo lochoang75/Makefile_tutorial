@@ -1,0 +1,10 @@
+all: blah
+
+blah::
+	echo "Hello"
+
+blah::
+	echo "Hello again"
+
+clean:
+	rm $(src_files)

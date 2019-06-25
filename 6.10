@@ -1,0 +1,9 @@
+all: one = cool
+
+.PHONY: all
+all:
+	echo one is defined: $(one)
+
+.PHONY: other
+other:
+	echo one is nothing: $(one)

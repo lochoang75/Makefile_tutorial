@@ -1,0 +1,11 @@
+with_space = hello #end of line
+after = $(with_space)there
+
+nullstring =
+space = $(nullstring) #end of line
+
+.PHONY: all
+
+all:
+	echo "$(after)"
+	echo start"$(space)"end

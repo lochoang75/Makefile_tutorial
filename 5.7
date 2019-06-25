@@ -1,0 +1,17 @@
+define sweet
+echo "hello"
+echo "target:" $@
+echo "prereqs:" $<
+endef
+
+.PHONY: all
+
+all: one
+		@$(sweet)
+		# Append @ here to append to append @ to all the commands in sweet: @$(sweet)
+		
+one:
+	touch one
+
+clean:
+	rm -f one

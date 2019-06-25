@@ -1,0 +1,10 @@
+nullstring = 
+foo = $(nullstring) # end of line; there is a spce here
+
+all:
+ifeq ($(strip $(foo)),)
+	echo "foo is empty"
+endif
+ifeq ($(foo),)
+	echo "foo doesn't event have space?"
+endif

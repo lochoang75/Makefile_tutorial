@@ -1,0 +1,14 @@
+one = export blah="I was set !"; echo $$blah
+
+define two
+export blah=set
+echo $$blah
+endef
+
+.PHONY: all
+
+all:
+	echo "This prints I was set: "
+	$(one)
+	echo "This does not:"
+	$(two)

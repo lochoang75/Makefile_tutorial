@@ -1,0 +1,10 @@
+comma := , 
+empty := 
+space := $(empty) $(empty)
+foo := a b c
+bar := $(subst $(space), $(comma), $(foo))
+
+.PHONY: all
+all:
+	# ouput is ", a , b , c". Noticce the spaces introduced
+	@echo $(bar)

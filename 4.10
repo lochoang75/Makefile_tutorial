@@ -1,0 +1,14 @@
+objects = foo.o bar.o
+
+all: $(objects)
+
+# targets ...: target-pattern: prereq-patterns ..
+$(objects): %.o: %.c
+	echo "make file" $@ "with prereqs" $<
+
+init:
+	touch foo.c
+	touch bar.c
+
+clean:
+	rm foo.c bar.c

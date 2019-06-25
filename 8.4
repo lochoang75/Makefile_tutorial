@@ -1,0 +1,6 @@
+foo := who are you
+bar := $(foreach wrd, $(foo), $(wrd)!)
+
+.PHONY: all
+all:
+	@echo $(bar)

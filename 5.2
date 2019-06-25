@@ -1,0 +1,11 @@
+all:
+	cd ..
+	# The cd above does nott affect this line, because each command is effect to run in a new shell
+	echo `pwd`
+
+	# This cd command affect the next because they a on the same line
+	cd ..;echo `pwd`
+
+	# Same as above
+	cd ..;\
+	echo `pwd`

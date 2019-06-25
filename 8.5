@@ -1,0 +1,8 @@
+foo := $(if this-is-empty,then!,else!)
+empty :=
+bar := $(if $(empty),then!,else!)
+
+.PHONY: all
+all:
+	@echo $(foo)
+	@echo $(bar)
